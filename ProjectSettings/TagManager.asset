@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Interact
+  - InteractTitan
+  - InteractGolem
+  - InteractSatir
   layers:
   - Default
   - TransparentFX
