@@ -15,19 +15,19 @@ public class InteractTip : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Interact"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             tipText.text = "press E";
             tipText.color = Color.blue;
             tipText.gameObject.SetActive(true);
             isPlayerNear = true;
-            reality = collision.transform.parent.gameObject;
+            reality = gameObject.transform.parent.gameObject;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Interact"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             tipText.gameObject.SetActive(false);
             isPlayerNear = false;
