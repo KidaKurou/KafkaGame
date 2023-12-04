@@ -18,7 +18,7 @@ public class InteractTip : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             tipText.text = "press E";
-            tipText.color = Color.red;
+            tipText.color = Color.blue;
             tipText.gameObject.SetActive(true);
             isPlayerNear = true;
             reality = gameObject.transform.parent.gameObject;

@@ -3,6 +3,7 @@ using UnityEngine;
 public class Lever : MonoBehaviour
 {
     public GameObject door; // —сылка на дверь, которую нужно открыть
+    public GameObject lever;
     private bool isPlayerNear = false;
     private bool isLeverActive = false;
 
@@ -35,7 +36,7 @@ public class Lever : MonoBehaviour
     private void RotateLever()
     {
         // »зменить угол поворота рычага
-        transform.rotation = isLeverActive ? Quaternion.Euler(0, 0, 45) : Quaternion.Euler(0, 0, -45);
-        transform.position = isLeverActive ? new Vector3(transform.position.x, 6.67f, transform.position.z) : new Vector3(transform.position.x, 7.44f, transform.position.z);
+        lever.transform.rotation = isLeverActive ? Quaternion.Euler(0, 0, -45) : Quaternion.Euler(0, 0, 0);
+        lever.transform.localPosition = isLeverActive ? new Vector3(0.784f, 0.358f) : new Vector3(0, 0.6f);
     }
 }
