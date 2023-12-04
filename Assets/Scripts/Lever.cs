@@ -35,6 +35,7 @@ public class Lever : MonoBehaviour
     private void RotateLever()
     {
         // Изменить угол поворота рычага
-        transform.rotation = isLeverActive ? Quaternion.Euler(0, 0, -45) : Quaternion.identity;
+        transform.rotation = isLeverActive ? Quaternion.Euler(0, 0, 45) : Quaternion.Euler(0, 0, -45);
+        transform.position = isLeverActive ? new Vector3(transform.position.x, 6.67f, transform.position.z) : new Vector3(transform.position.x, 7.44f, transform.position.z);
     }
 }
